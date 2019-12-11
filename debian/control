@@ -1,0 +1,23 @@
+Source: mc-rtc-msgs
+Priority: optional
+Maintainer: Pierre Gergondet <pierre.gergondet@gmail.com>
+Standards-Version: 3.9.5
+Section: misc
+Homepage: https://github.com/jrl-umi3218/mc_rtc_msgs
+Vcs-git: https://github.com/jrl-umi3218/mc_rtc_msgs
+Vcs-Browser: https://github.com/jrl-umi3218/mc_rtc_msgs
+Build-Depends: debhelper (>= 9),
+               cmake,
+               ros-@ROS_DISTRO@-catkin,
+               ros-@ROS_DISTRO@-message-generation,
+               ros-@ROS_DISTRO@-geometry-msgs
+
+
+Package: ros-@ROS_DISTRO@-mc-rtc-msgs
+Architecture: any
+Section: misc
+Depends: ${misc:Depends},
+         ros-@ROS_DISTRO@-message-runtime,
+         ros-@ROS_DISTRO@-geometry-msgs
+Description: Messages and services used for mc_rtc ROS integration
+ Messages and services used for mc_rtc ROS integration

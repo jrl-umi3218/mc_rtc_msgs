@@ -1,0 +1,3 @@
+opt/ros/@ROS_DISTRO@/include/*
+opt/ros/@ROS_DISTRO@/lib/*
+opt/ros/@ROS_DISTRO@/share/*

@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.1)
 project(mc_rtc_msgs VERSION 1.0.0)
 
-find_package(catkin REQUIRED COMPONENTS roscpp message_generation geometry_msgs)
+find_package(catkin REQUIRED COMPONENTS message_generation geometry_msgs)
 
 add_service_files(
   DIRECTORY srv
@@ -21,7 +21,6 @@ add_service_files(
 generate_messages(DEPENDENCIES geometry_msgs)
 
 catkin_package(
-  INCLUDE_DIRS include
   CATKIN_DEPENDS geometry_msgs
 )
 
