@@ -123,7 +123,7 @@ jobs:
           sed -i -e"s/@ROS_DISTRO@/${ROS_DISTRO}/" debian/control
           sed -i -e"s/@ROS_DISTRO@/${ROS_DISTRO}/" debian/rules
           sed -e"s/@ROS_DISTRO@/${ROS_DISTRO}/" debian/ros-ROS_DISTRO-mc-rtc-msgs.install | tee -a debian/ros-${ROS_DISTRO}-mc-rtc-msgs.install
-          sed -i -e"s/@PYTHON_EXECUTABLE@/${PYTHON_EXECUTABLE}" debian/rules
+          sed -i -e"s#@PYTHON_EXECUTABLE@#${PYTHON_EXECUTABLE}#" debian/rules
         fi
     - name: Build package
       uses: jrl-umi3218/github-actions/build-package-native@master
