@@ -74,10 +74,12 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        dist: [xenial, bionic]
+        dist: [xenial, bionic, focal]
         arch: [i386, amd64]
         exclude:
           - dist: bionic
+            arch: i386
+          - dist: focal
             arch: i386
     runs-on: ubuntu-18.04
     steps:
@@ -105,6 +107,12 @@ jobs:
         then
           export ROS_DISTRO="melodic"
           export PACKAGES_OUT=${PACKAGES_OUT}-${ROS_DISTRO}
+        fi
+        if [ "${{ matrix.dist }}" = "focal" -a "${{ matrix.arch }}" = "amd64" ]
+        then
+          export ROS_DISTRO="noetic"
+          export PACKAGES_OUT=${PACKAGES_OUT}-${ROS_DISTRO}
+          sed -i -e"s/python2.7/python3/" debian/rules
         fi
         echo "::set-env name=ROS_DISTRO::${ROS_DISTRO}"
         echo "::set-env name=PACKAGES_OUT::${PACKAGES_OUT}"
