@@ -1,3 +1,9 @@
+mc-rtc-msgs (1.0.1-1ubuntu1) unstable; urgency=medium
+
+  * Bump upstream version for focal/noetic support
+
+ -- Pierre Gergondet <pierre.gergondet+ppa@gmail.com>  Fri, 12 Jun 2020 14:16:37 +0800
+
 mc-rtc-msgs (1.0.0-1ubuntu1) unstable; urgency=medium
 
   * Initial release

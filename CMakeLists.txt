@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.1)
-project(mc_rtc_msgs VERSION 1.0.0)
+project(mc_rtc_msgs VERSION 1.0.1)
 
 find_package(catkin REQUIRED COMPONENTS message_generation geometry_msgs)
 
