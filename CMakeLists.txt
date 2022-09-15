@@ -18,6 +18,11 @@ add_service_files(
   move_com.srv
 )
 
+add_message_files(
+  DIRECTORY msg
+  FILES
+  JointSensors.msg
+)
 generate_messages(DEPENDENCIES geometry_msgs)
 
 catkin_package(
