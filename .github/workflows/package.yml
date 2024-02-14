@@ -23,7 +23,7 @@ jobs:
       with-ros: true
       matrix: |
         {
-          "dist": ["bionic", "focal"],
+          "dist": ["bionic", "focal", "jammy"],
           "arch": ["amd64"]
         }
     secrets:

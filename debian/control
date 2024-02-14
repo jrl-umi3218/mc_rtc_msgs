@@ -8,8 +8,12 @@ Vcs-git: https://github.com/jrl-umi3218/mc_rtc_msgs
 Vcs-Browser: https://github.com/jrl-umi3218/mc_rtc_msgs
 Build-Depends: debhelper (>= 9),
                cmake,
-               ros-@ROS_DISTRO@-catkin,
-               ros-@ROS_DISTRO@-message-generation,
+#ROS1                ros-@ROS_DISTRO@-catkin,
+#ROS1                ros-@ROS_DISTRO@-message-generation,
+#ROS2                python3-colcon-common-extensions,
+#ROS2                ros-@ROS_DISTRO@-ament-cmake,
+#ROS2                ros-@ROS_DISTRO@-ament-package,
+#ROS2                ros-@ROS_DISTRO@-rosidl-default-generators,
                ros-@ROS_DISTRO@-geometry-msgs
 
 
@@ -17,7 +21,8 @@ Package: ros-@ROS_DISTRO@-mc-rtc-msgs
 Architecture: any
 Section: misc
 Depends: ${misc:Depends},
-         ros-@ROS_DISTRO@-message-runtime,
+#ROS1          ros-@ROS_DISTRO@-message-runtime,
+#ROS2          ros-@ROS_DISTRO@-rosidl-default-runtime,
          ros-@ROS_DISTRO@-geometry-msgs
 Description: Messages and services used for mc_rtc ROS integration
  Messages and services used for mc_rtc ROS integration
