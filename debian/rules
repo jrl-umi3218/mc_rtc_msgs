@@ -2,6 +2,7 @@
 # -*- makefile -*-
 
 export ROS_DISTRO:=@ROS_DISTRO@
+export ROS_VERSION:=$(shell . /opt/ros/${ROS_DISTRO}/setup.sh && echo $$ROS_VERSION)
 export ROS_PYTHON_VERSION:=$(shell . /opt/ros/${ROS_DISTRO}/setup.sh && echo $$ROS_PYTHON_VERSION)
 ifeq (${ROS_PYTHON_VERSION}, 3)
 	export PYTHONPATH:=/opt/ros/${ROS_DISTRO}/lib/python3/dist-packages:${PYTHONPATH}
