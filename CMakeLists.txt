@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.10)
 project(mc_rtc_msgs VERSION 1.1.1)
 
 if(NOT DEFINED ENV{ROS_VERSION})
