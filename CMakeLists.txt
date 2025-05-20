@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(mc_rtc_msgs VERSION 1.1.1)
+project(mc_rtc_msgs VERSION 1.1.2)
 
 if(NOT DEFINED ENV{ROS_VERSION})
   message(FATAL_ERROR "ROS_VERSION is not set in the environment")
