@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.22)
-project(mc_rtc_msgs VERSION 1.1.2)
+project(mc_rtc_msgs VERSION 1.1.3)
 
 find_package(ament_cmake REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
